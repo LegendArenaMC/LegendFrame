@@ -1,28 +1,35 @@
-Kotlin Loader [![Build Status](https://snap-ci.com/LegendArenaMC/Kotlin-Loader/branch/master/build_image)](https://snap-ci.com/LegendArenaMC/Kotlin-Loader/branch/master)
+LegendFrame
 ====
 
-Kotlin loader. Contains Kotlin runtime class files so that any Bukkit plugin that uses Kotin loads successfully.
-
-Standard Disclaimer
-====
-
-I am not claiming I'm a developer or contributor to Kotlin, or anything similar to that.
-I am just making a loader so that Bukkit plugins can work if they're made in Kotlin.
+The successor to KotlinLoader. Requirement for all LegendArena plugins.
 
 Getting a Jar
 ====
 
-To get a jar with the Kotlin runtime, run the following commands in the repository root:
-
-```
-$ gradle build
+```bash
+$ ./build.sh
 ```
 
-Usage
+The built jar should be in the build/libs folder.
+
+Usage for Developers
 ====
 
-In your `plugin.yml`, place the following:
+In your plugin.yml, place the following line:
 
+```yaml
+depends: [LegendFrame]
 ```
-depends: [KotlinLoader]
-```
+
+Usage for Server Owners
+====
+
+Place the built .jar in your plugins folder and enjoy.
+
+POSSIBLE CONFLICTS
+====
+
+* BarAPI
+* Any plugins that adds the Kotlin runtime
+* GSON-containing plugins
+* Apache Commons IO-containing plugins
