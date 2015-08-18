@@ -1,0 +1,7 @@
+main: legendframe.LegendFrameLoader
+name: LegendFrame
+description: Contains APIs needed for most Legend Arena plugins. Not much else of use.
+version: 1.0
+author: Legend Arena
+authors: [Shadowed APIs Developers]
+load: STARTUP
