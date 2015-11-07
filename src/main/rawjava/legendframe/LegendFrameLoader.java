@@ -18,24 +18,14 @@ public class LegendFrameLoader extends JavaPlugin {
         getLogger().info(" ");
 
         boolean didAThingBreak = false;
-
-        try {
-            //yet again, we don't give a single care.
-            //noinspection ObjectEqualsNull
-            Class.forName("legendframe.ScalaTest").newInstance().equals(null);
-        } catch(Exception ex) {
-            getLogger().warning("Scala testing failed! Most Scala based plugins will probably not work.");
-            didAThingBreak = true;
-        }
         try {
             new KotlinTest().test();
         } catch(Exception ex) {
             getLogger().warning("Kotlin testing failed! Most Kotlin based plugins will probably not work.");
             didAThingBreak = true;
         }
-
         if(!didAThingBreak)
-            getLogger().info("Both Kotlin and Scala work - enjoy!");
+            getLogger().info("Kotlin works just fine - enjoy!");
     }
 
     public void onDisable() {

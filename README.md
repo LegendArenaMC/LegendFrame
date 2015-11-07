@@ -1,7 +1,7 @@
 LegendFrame
 ====
 
-The successor to KotlinLoader. Requirement for all LegendArena plugins.
+The successor to my old plugin, KotlinLoader.
 
 Getting a Jar
 ====
@@ -11,6 +11,9 @@ $ ./build.sh
 ```
 
 The built jar should be in the build/libs folder.
+
+If you're building on Windows... tough luck. I don't support building on Windows personally.
+(it can be done, I just don't recommend it - at least use Git Bash or Cygwin. they let you use the build.sh script.)
 
 Usage for Developers
 ====
@@ -29,7 +32,6 @@ Place the built .jar in your plugins folder and enjoy.
 POSSIBLE CONFLICTS
 ====
 
-* BarAPI
 * Any plugins that adds the Kotlin runtime
 * GSON-containing plugins
 * Apache Commons IO-containing plugins
